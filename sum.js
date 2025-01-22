@@ -7,13 +7,21 @@ export function sum(stringWithNumbers) {
         return undefined;
     }
 
-    // const clearString = stringWithNumbers.replace(/[^0-9,]/g, '');
+    const cleanString = clearString(stringWithNumbers);
 
-    const numbers = stringWithNumbers.split(',')?.filter((num) => num && num < 1000);
+    const numbers = cleanString.split(',')?.filter((num) => num && num < 1000);
     return numbers?.reduce((acc, num) => acc + parseInt(num), 0);
   }
 
 
   function isString(val) {
     return typeof val === 'string';
+  }
+
+  function clearString(stringWithNumbers) {
+    // Match groups of consecutive digits
+    const numberGroups = stringWithNumbers.match(/\d+/g);
+    
+    // Join the number groups with commas
+    return numberGroups ? numberGroups.join(',') : '';
   }

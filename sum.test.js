@@ -24,9 +24,13 @@ describe('Sum Function', () => {
         expect(sum('2,5,6,7,8,10001')).toBe(28);
     });
 
-    // test('add numbers in the string "abc123!@#,45de*67?890" and retun result as 123 and ignoring 1000', () => {
-    //     expect(sum("abc123!@#,45de*67?890")).toBe(123);
-    // });
+    test('add numbers in string ;\n1;2 and retun result as 3', () => {
+        expect(sum(';\n1;2')).toBe(3);
+    });
+
+    test('add numbers in the string "abc123!@#,45de*67?890" and retun result as 123 and ignoring 1000', () => {
+        expect(sum("abc123!@#,45de*67?890")).toBe(1125);
+    });
 });
 
 
