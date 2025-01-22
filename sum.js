@@ -7,7 +7,9 @@ export function sum(stringWithNumbers) {
         return undefined;
     }
 
-    const numbers = stringWithNumbers.split(',');
+    // const clearString = stringWithNumbers.replace(/[^0-9,]/g, '');
+
+    const numbers = stringWithNumbers.split(',')?.filter((num) => num && num < 1000);
     return numbers?.reduce((acc, num) => acc + parseInt(num), 0);
   }
 
