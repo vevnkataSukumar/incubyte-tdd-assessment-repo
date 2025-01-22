@@ -1,0 +1,26 @@
+{
+  "name": "incubyte-tdd-assessment-repo",
+  "version": "0.0.1",
+  "description": "Incubyte TDD Assessment",
+  "main": "sum.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "TDD",
+    "JavaScript",
+    "Assessment"
+  ],
+  "author": "Venkata Sukumar D",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  }
+}
