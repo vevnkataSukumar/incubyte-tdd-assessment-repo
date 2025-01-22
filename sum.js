@@ -6,7 +6,9 @@ export function sum(stringWithNumbers) {
     if (!isString(stringWithNumbers)) {
         return undefined;
     }
-    return 1;
+
+    const numbers = stringWithNumbers.split(',');
+    return numbers?.reduce((acc, num) => acc + parseInt(num), 0);
   }
 
 
